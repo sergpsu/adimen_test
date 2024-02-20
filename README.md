@@ -1,5 +1,5 @@
 # Configuration
-## AWS credentials
+## AWS credentials for SQS
 Use `aws configure` to set access key and secret
 
 ## Environment
@@ -10,16 +10,22 @@ Required env vars:
 - USER_EMAIL - Optional. If set along with password, then user will be created on start
 - USER_PASSWORD
 
-`load_dotenv()` is used, so can create `.env` file inside `app` directory
+`load_dotenv()` is used, so can create `.env` file inside `app` directory.  
 Example:
-`export SQS_QUEUE_URL="https://sqs.eu-central-1.amazonaws.com/1234566790/adimen_queue.fifo"`
+```
+SQS_QUEUE_URL="https://sqs.eu-central-1.amazonaws.com/1234566790/adimen_queue.fifo"
+USER_EMAIL="test@api.com"
+USER_PASSWORD="123"
+```
 
 # Init database
 `PYTHONPATH=$(pwd)/app alembic upgrade head`
 
 # Run
-`poetry shell`
-`python app/main.py`
+```
+poetry shell
+python app/main.py
+```
 
 # Test
 `PYTHONPATH=$(pwd)/app pytest`
