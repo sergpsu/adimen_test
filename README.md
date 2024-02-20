@@ -13,7 +13,7 @@ Required env vars:
 `load_dotenv()` is used, so can create `.env` file inside `app` directory.  
 Example:
 ```
-SQS_QUEUE_URL="https://sqs.eu-central-1.amazonaws.com/1234566790/adimen_queue.fifo "
+SQS_QUEUE_URL="https://sqs.eu-central-1.amazonaws.com/1234566790/adimen_queue.fifo"
 USER_EMAIL="test@api.com"
 USER_PASSWORD="123"
 ```
